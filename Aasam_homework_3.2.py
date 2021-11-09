@@ -177,3 +177,21 @@ universal_1 = Universal(name='Kamaru Usman',
                         weight_category='welterweight',
                         style='universal')
 print(universal_1)
+
+
+class Cinema:
+    def __init__(self, name, price):
+        self.name = name
+        self.price = price
+
+    def __add__(self, other):
+        if self.price == 100:
+            print(f"Piter pen{self.name}")
+        elif self.price == 200:
+            print('Horror')
+
+    def __str__(self):
+        return f'{self.name}, {self.price}'
+cinema_1 = Cinema(price=200,
+                  name=int(input()))
+print(cinema_1)
