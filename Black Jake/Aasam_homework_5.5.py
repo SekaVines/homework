@@ -21,6 +21,9 @@ SecondConverter(int(input("Your number:")))
 
 
 class Chocolate:
+    Changes_ = [
+        'Sugar Power'
+    ]
     def __init__(self, cocoa, sugar, milk):
         self.cocoa = cocoa
         self.sugar = sugar
@@ -28,8 +31,7 @@ class Chocolate:
 
     @classmethod
     def Changes(cls, sugar):
-        changes_1 = cls(sugar='sugar substitute')
-        return changes_1
+        return cls.Changes_
 
     @staticmethod
     def portions():
@@ -65,4 +67,5 @@ chocolate_1.cocoa = 'CocoaPowder,  '
 print(chocolate_1.milk_chocolate_structure)
 del chocolate_1.milk_chocolate_structure
 print(chocolate_1.milk_chocolate_structure)
-
+print(Chocolate.Changes())
+print(Chocolate.__class__)
